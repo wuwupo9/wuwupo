@@ -101,7 +101,7 @@ if (url.includes("/x/resource/show/skin")) {
     obj.data.ipad_recommend_sections = obj.data.ipad_recommend_sections.filter((i) => itemList.includes(i.id));
   }
   if (obj?.data?.ipad_more_sections?.length > 0) {
-    // 407我的客服 410设置 1070青少年守护
+    // 407我的客服 410设置 964青少年守护
     const itemList = [407, 410];
     obj.data.ipad_more_sections = obj.data.ipad_more_sections.filter((i) => itemList.includes(i.id));
   }
