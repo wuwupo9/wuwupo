@@ -92,7 +92,7 @@ if (url.includes("/x/resource/show/skin")) {
   }
 } else if (url.includes("/x/v2/account/mine/ipad")) {
   if (obj?.data?.ipad_upper_sections) {
-    // 投稿 创作首页 稿件管理 有奖活动
+    // 投稿 创作首页 稿件管理 有奖活动 我的课程
     delete obj.data.ipad_upper_sections;
   }
   if (obj?.data?.ipad_recommend_sections?.length > 0) {
