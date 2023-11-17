@@ -98,12 +98,12 @@ if (url.includes("/x/resource/show/skin")) {
   if (obj?.data?.ipad_recommend_sections?.length > 0) {
     // 789我的关注 790我的消息 791我的钱包 792直播中心 793大会员 794我的课程 2542我的游戏
     const itemList = [789, 790];
-    obj.data.ipad_recommend_sections = obj.data.ipad_recommend_sections.filter((i) => itemList.includes(i.id));
+   delete obj.data.ipad_recommend_sections = obj.data.ipad_recommend_sections.filter((i) => itemList.includes(i.id));
   }
   if (obj?.data?.ipad_more_sections?.length > 0) {
     // 407我的客服 410设置 964青少年守护
     const itemList = [407, 410];
-    obj.data.ipad_more_sections = obj.data.ipad_more_sections.filter((i) => itemList.includes(i.id));
+    delete obj.data.ipad_more_sections = obj.data.ipad_more_sections.filter((i) => itemList.includes(i.id));
   }
 } else if (url.includes("/x/v2/account/myinfo")) {
   // 会员清晰度
