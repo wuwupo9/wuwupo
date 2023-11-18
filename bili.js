@@ -13,7 +13,7 @@ if (url.includes("/x/resource/show/skin")) {
   // 标签页
   if (obj?.data?.tab) {
     obj.data.tab = obj.data.tab.filter(
-      (item) => item.name === "推荐" || item.name === "热门"
+      (item) => item.name === "推荐" || item.name === "热门" || item.name === "动画" || item.name === "影视"
     );
     fixPos(obj.data.tab);
   }
@@ -92,18 +92,18 @@ if (url.includes("/x/resource/show/skin")) {
   }
 } else if (url.includes("/x/v2/account/mine/ipad")) {
   if (obj?.data?.ipad_upper_sections) {
-    // 投稿 创作首页 稿件管理 有奖活动 我的课程
+    // 投稿 创作首页 稿件管理 有奖活动
     delete obj.data.ipad_upper_sections;
   }
   if (obj?.data?.ipad_recommend_sections?.length > 0) {
     // 789我的关注 790我的消息 791我的钱包 792直播中心 793大会员 794我的课程 2542我的游戏
     const itemList = [789, 790];
-   delete obj.data.ipad_recommend_sections = obj.data.ipad_recommend_sections.filter((i) => itemList.includes(i.id));
+    obj.data.ipad_recommend_sections = obj.data.ipad_recommend_sections.filter((i) => itemList.includes(i.id));
   }
   if (obj?.data?.ipad_more_sections?.length > 0) {
-    // 407我的客服 410设置 964青少年守护
-    const itemList = [407, 410];
-    delete obj.data.ipad_more_sections = obj.data.ipad_more_sections.filter((i) => itemList.includes(i.id));
+    // 797我的客服 798设置 1070青少年守护
+    const itemList = [797, 798];
+    obj.data.ipad_more_sections = obj.data.ipad_more_sections.filter((i) => itemList.includes(i.id));
   }
 } else if (url.includes("/x/v2/account/myinfo")) {
   // 会员清晰度
