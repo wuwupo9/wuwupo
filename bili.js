@@ -45,7 +45,7 @@ if (url.includes("/x/resource/show/skin")) {
         delete item.button;
       }
       if (item?.title) {
-        if (item?.title === "创作中心" || item?.title === "推荐服务") {
+        if (item?.title === "创作中心" || item?.title === "推荐服务" || item?.title === "直播中心") {
           // 不必要项目
           continue;
         } else if (item?.title === "更多服务") {
