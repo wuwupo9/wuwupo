@@ -36,7 +36,7 @@ if (url.includes("/x/resource/show/skin")) {
 } else if (url.includes("/x/resource/top/activity")) {
   // 右上角活动入口
   obj = { code: -404, message: "啥都木有", ttl: 1, data: null };
-} else if (url.includes("/x/v2/account/mine?")) {
+} else if (url.includes("/x/v2/account/mine/myinfo?")) {
   // 我的页面
   if (obj?.data?.sections_v2?.length > 0) {
     let newSects = [];
